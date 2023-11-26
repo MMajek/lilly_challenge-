@@ -28,4 +28,5 @@ drawLine([50, 550], [950, 550])
 drawTriangle([950, 535], [950, 565], [965, 550])
 
 let stocks = stock_data_imports.getStocks();
+let stocksPoints = stock_data_imports.getStockPoints();
 console.log(stocks)
