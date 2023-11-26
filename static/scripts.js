@@ -1,6 +1,6 @@
 // tried to use this _stock = require("../stocks.js")  , but this file is client-side javaScript meaning we cant use it.
 
-import * as stock_imports from '../stocks.js'
+import * as stock_data_imports from '../stocks.js'
 const canvas = document.getElementById('chart')
 const ctx = canvas.getContext('2d')
 
@@ -27,4 +27,5 @@ drawTriangle([35, 50], [65, 50], [50, 35])
 drawLine([50, 550], [950, 550])
 drawTriangle([950, 535], [950, 565], [965, 550])
 
-let stocks = stock_imports.getStocks();
+let stocks = stock_data_imports.getStocks();
+console.log(stocks)
