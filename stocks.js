@@ -43,9 +43,11 @@ module.exports = {
     if (Math.random() < FAILUE_RATE) {
       throw new Error('Failed to generate stock data')
     }
+  
     if (!stocks.includes(stockName)) {
       throw new Error(`Uknown stock ${stockName}`)
     }
+  
     const timestamps = getTimestamps(+timestamp, 10)
     return getSeries(stockName, timestamps).map((value, idx) => ({
       value,
