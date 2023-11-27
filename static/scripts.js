@@ -29,4 +29,10 @@ drawTriangle([950, 535], [950, 565], [965, 550])
 
 let stocks = stock_data_imports.getStocks();
 let stocksPoints = stock_data_imports.getStockPoints();
+
+var stockExtracted = (stocks.length > 0) ? true:false;
+if (stockExtracted) {document.querySelector('.spinner').style.display = 'none';}
+
+// this will remove the spinner if the stock has been extracted which would result in a non empty array.
+
 console.log(`${stocks} \n ${stocksPoints}`);
